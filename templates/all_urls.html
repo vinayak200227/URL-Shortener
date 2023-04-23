@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}View all URLs{% endblock %}
+
+{% block content %}
+    
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Long URL</th>
+            <th scope="col">Short URL</th>
+        </tr>
+        </thead>
+        <tbody class="table-group-divider">
+        {% for url in vals %}
+        <tr>
+            <th scope="row">{{ url.id_ }}</th>
+            <td>{{ url.long }}</td>
+            <td>{{ url.short }}</td>
+            
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
